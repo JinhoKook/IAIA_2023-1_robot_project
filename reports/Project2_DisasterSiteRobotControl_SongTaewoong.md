@@ -24,7 +24,7 @@ This repository includes a **tutorial** on the **Robot System for Motor Tracking
 
 ## 1. Project Background
 
-![연구배경](C:\Users\Taewoong\Desktop\HANDONG\2023-1\IndustryAI\Project\2_RobotControl\최종보고서\그림\연구배경.PNG)
+![연구배경](https://github.com/Ohjeahyun1/EC-jeahyun-447/assets/113822586/2599da9d-1ec6-4614-b5a0-e64c2bc8c79e)
 
 ​	In 4 steps of the disaster response process, the project focuses on the third step, **Retrieval & Recovery**. This stage includes the process of removing debris after a disaster, and during the process, human damage is caused due to building collapse, overwork, and radiation exposure.
 
@@ -48,7 +48,7 @@ To solve the human casualty problem, this project aims to develop two algorithms
 
 
 
-![알고리즘흐름](C:\Users\Taewoong\Desktop\HANDONG\2023-1\IndustryAI\Project\2_RobotControl\최종보고서\그림\알고리즘흐름.PNG)
+![알고리즘흐름](https://github.com/Ohjeahyun1/EC-jeahyun-447/assets/113822586/b9811cb6-c031-42db-a552-c309c663d55e)
 
 
 
@@ -66,7 +66,7 @@ To solve the human casualty problem, this project aims to develop two algorithms
   * Pixel to robot absolute coordinate (See figure below)
   * Sending x_rob / y_rob to robot control part
 
-  ![이미지처리1](C:\Users\Taewoong\Desktop\HANDONG\2023-1\IndustryAI\Project\2_RobotControl\최종보고서\그림\이미지처리1.PNG)
+  ![이미지처리1](https://github.com/Ohjeahyun1/EC-jeahyun-447/assets/113822586/e220447a-6e00-4f8e-b276-47f8e93568ed)
 
 * **Debris Catching**
   * Color segmentation for detecting debris
@@ -74,7 +74,7 @@ To solve the human casualty problem, this project aims to develop two algorithms
   * Coordinate conversion (θ_image to θ_end)
   * Sending θ_end to robot control part
 
-![이미지처리2](C:\Users\Taewoong\Desktop\HANDONG\2023-1\IndustryAI\Project\2_RobotControl\최종보고서\그림\이미지처리2.PNG)
+![이미지처리2](https://github.com/Ohjeahyun1/EC-jeahyun-447/assets/113822586/fe1f4b16-7bbf-46a8-967d-42b3020aeb00)
 
 
 
@@ -106,7 +106,7 @@ To solve the human casualty problem, this project aims to develop two algorithms
 
 **Table 1. Hardware description**
 
-![하드웨어 설명](C:\Users\Taewoong\Desktop\HANDONG\2023-1\IndustryAI\Project\2_RobotControl\최종보고서\그림\하드웨어 설명.PNG)
+![하드웨어 설명](https://github.com/Ohjeahyun1/EC-jeahyun-447/assets/113822586/64ee8886-929c-4690-86f8-15ca592897a3)
 
 ## 4. Tutorial
 
@@ -152,13 +152,20 @@ void loop() {
 
 * **Check bluetooth device address**
 
-![블루투스모듈연결사진](C:\Users\Taewoong\Desktop\HANDONG\2023-1\IndustryAI\Project\2_RobotControl\최종보고서\그림\블루투스모듈연결사진.png)
+![블루투스모듈연결사진](https://github.com/Ohjeahyun1/EC-jeahyun-447/assets/113822586/a081c67b-d589-4ea8-a431-218ce5916f1a)
 
 * **Bluetooth device connection code**
 
 ```
 sudo rfcomm connect <number> <address>
 # In my case, sudo rfcomm connect 0 98:DA:60:05:2A:8A
+```
+
+* **Serial Module Download code**
+
+```
+sudo apt-get update
+sudo apt-get install python3-serial
 ```
 
 
@@ -344,7 +351,14 @@ It is a code that reads the sensor value of Arduino and send data to ROS.
               # Therefore, flush function can solve the communication delay problem.
   ```
 
-  
+* **Serial Module Download code**
+
+```
+sudo apt-get update
+sudo apt-get install python3-serial
+```
+
+
 
 #### (6) demo_control_with_cameras.py
 
@@ -464,8 +478,8 @@ sudo rfcomm connect 0 98:DA:60:05:2A:8A
 
 **2. UR5e robot software connection**
 
-```roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
-roslaunch ur5e_rg2_moveit_config move_group.launch
+```
+roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
 ```
 
 **3. Teaching pendant**
@@ -517,7 +531,7 @@ rosrun ur_python demo_control_with_cameras_230611.py
 * The computer name must register under the following command. (user) is a computer name.
 
 ```
-sudo usermod -a- -G dialout $(USER)   
+sudo usermod -a -G dialout $(USER)   
 ```
 
 
