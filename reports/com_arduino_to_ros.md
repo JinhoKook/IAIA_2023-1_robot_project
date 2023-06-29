@@ -60,9 +60,5 @@ It is a code that reads the sensor value of Arduino and send data to ROS.
               # Therefore, flush function can solve the communication delay problem.
   ```
 
-* **Serial Module Download code**
 
-```
-sudo apt-get update
-sudo apt-get install python3-serial
-```
+
